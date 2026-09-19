@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://deccan-birders.example/schemas/sighting-v1.json",
+  "title": "Deccan Birders Sighting v1",
+  "type": "object",
+  "required": ["format", "version", "species", "observedOn", "place", "observer"],
+  "properties": {
+    "format": { "const": "org.deccan-birders.sighting" },
+    "version": { "const": 1 },
+    "species": { "type": "string", "minLength": 1 },
+    "observedOn": { "type": "string", "format": "date" },
+    "place": { "type": "string", "minLength": 1 },
+    "observer": { "type": "string", "minLength": 1 },
+    "photoReference": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+  },
+  "additionalProperties": false
+}

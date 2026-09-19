@@ -5,3 +5,5 @@ The browser writer deliberately supports two upload routes: a subsidised public 
 The reader is a separately loaded `reader.html` application and imports only the standalone `format/` contract—not writer code or state. It downloads raw records through `/bytes/<reference>`, validates the embedded format/version, and renders the record. Run `npm run dev -- --host 127.0.0.1` to use the browser experience; `npm run reader -- <reference>` remains the minimal command-line reader.
 
 See [LIVE-DEMO.md](LIVE-DEMO.md) for an actual writer-to-independent-reader interoperability proof.
+
+For a fourth implementation, use the standalone [JSON Schema](format/sighting.schema.json) and [interoperability guide](INTEROPERABILITY.md), not the application code.
